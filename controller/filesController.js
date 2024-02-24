@@ -321,7 +321,7 @@ export const fileUpload = async (req, res) => {
     }
 
     // Create a new file document
-    const storageRef = ref(storage, `pdfs/${filename}`)
+    const storageRef = ref(storage, `pdfs/${subcollectionName}/${filename}`)
     await uploadBytes(storageRef, file.buffer, {
       contentType: 'application/pdf'
     })
